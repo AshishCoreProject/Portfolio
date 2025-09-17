@@ -13,7 +13,7 @@ const Navigation = () => {
           {/* Logo / Name */}
           <div className="flex-shrink-0">
             <h1 className="!text-2xl md:!text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-yellow-500 to-blue-500 bg-clip-text text-transparent">
-              Prince Kumar
+              Spineor Web Services
             </h1>
           </div>
 
@@ -24,7 +24,7 @@ const Navigation = () => {
               <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">About</a>
               <a href="#skills" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">Skills</a>
               <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">Projects</a>
-              <a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">Contact</a>
+              {/* <a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium">Contact</a> */}
             </div>
           </div>
 

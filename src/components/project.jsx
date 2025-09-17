@@ -1,93 +1,127 @@
+import { useState } from "react";
 
+const projects = [
+  {
+    title: "E-commerce Platform",
+    description:"APS is an E-commerce website part of EBC Technologies (USA). The Autoparts shop has been fulfilling the car parts and accessories requirements of driving enthusiasts across the globe. This project consists of around 18 micro web services, and each one has specific functionality.",
+    image: "/Images/ecommerce.png",
+    tech: ["React", "Node.js", "Next.js"],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Self-Scheduling and Patient Flow Solution",
+    description:"InQuicker is a healthcare technology platform designed to simplify how patients schedule appointments and how care providers manage patient flow. It offers online / self-scheduling tools, discharge scheduling, and integrations with existing clinical workflows. The goal is to improve patient acquisition, retention, satisfaction, and operational efficiency.",
+    image: "/Images/finance.png",
+    tech: ["React", "Firebase", "Tailwind"],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Online Foods Cube",
+    description:
+      "The world's newest smartphone app for food delivery is called onlinefoodscube.With the help of the web application onlinefoodscube, you can order meals from your preferred restaurants and have it delivered right to your door.",
+    image:
+      "https://www.spineor.com/images/eatfood_m.png",
+    tech: ["JavaScript", "API", "CSS3"],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Fleet Farm",
+    description:
+      "Fleet farm has become a popular name among mobile users. This mobile application aims to enrich the shopping experience of users worldwide. The biggest advantage of using the app is it is lightweight and has effortless installation. Type the product name in the search box & apply filters to find what you're looking for. It comes with multiple payment gateways and updates you about the order status from time to time. Don't forget to check new offers, discounts, and gift cards on our app. Don't wait to make Fleet Farm your one-stop shopping destination and have an exhilarating shopping experience! ",
+    image: "/Images/FleetFarm.png",
+    tech: ["React Native", "Java", "MongoDB"],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Apex Auto Parts",
+    description:
+      "Apex Auto Parts is an e-commerce platform under EBC Technologies (USA), providing high-quality auto parts and accessories to car enthusiasts worldwide. Built with 18 microservices, each handling specific functions like product search, order management, and secure payments, the platform ensures a smooth and efficient shopping experience for customers around the globe.",
+    image: "https://spineor.com/images/work/Apex/apexautoparts.jpg",
+    tech: ["Next.js", "Node.js", "MongoDB"],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Ai Privacy",
+    description:"Ensure the Safety of Your Personal Data with AiPrivacy: As the use of AI language models like ChatGPT becomes increasingly prevalent, it's crucial to adhere to organizational policies prohibiting the sharing of personally identifiable information (PII). AI companies themselves actively discourage the sharing of PII to uphold user privacy. With AiPrivacy, you can keep your sensitive information private and secure while harnessing the advantages of AI language models.",
+    image: "https://spineor.com/images/work/AiPrivacy/Ai-Privacy.jpg",
+    tech: ["React", "Python", " PostGreSQL"],
+    demo: "#",
+    code: "#",
+  },
 
-const Project  = ()=> {
-    
-    return (
-    // <!-- Projects Section -->
+];
+
+const Project = () => {
+  const [expanded, setExpanded] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpanded(expanded === index ? null : index);
+  };
+
+  return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400">
-                    Some of my recent work that I'm proud of
-                </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* <!-- Project 1 --> */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img src={"/Images/ecommerce.png"} alt="Project 1" className="w-full h-48 object-cover"/>
-                    <div className="p-6">
-                        <h3 className="text-xl font-semibold mb-2">E-commerce Platform</h3>
-                        <p className="text-gray-600 dark:text-gray-400 mb-4">A modern e-commerce solution with React and Node.js</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">React</span>
-                            <span className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">Next Js</span>
-                        </div>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
-                                <i data-lucide="external-link" className="w-4 h-4 mr-1"></i>
-                                Live Demo
-                            </a>
-                            <a href="#" className="text-gray-600 dark:text-gray-400 hover:underline flex items-center">
-                                <i data-lucide="github" className="w-4 h-4 mr-1"></i>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- Project 2 --> */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img src="/Images/finance.png" alt="Project 2" className="w-full h-48 object-cover"/>
-                    <div className="p-6">
-                        <h3 className="text-xl font-semibold mb-2">Task Management App</h3>
-                        <p className="text-gray-600 dark:text-gray-400 mb-4">Collaborative task management with real-time updates</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm">Vue.js</span>
-                            <span className="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm">Firebase</span>
-                            <span className="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full text-sm">Tailwind</span>
-                        </div>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
-                                <i data-lucide="external-link" className="w-4 h-4 mr-1"></i>
-                                Live Demo
-                            </a>
-                            <a href="#" className="text-gray-600 dark:text-gray-400 hover:underline flex items-center">
-                                <i data-lucide="github" className="w-4 h-4 mr-1"></i>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                {/* <!-- Project 3 --> */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=400&h=250&fit=crop" alt="Project 3" className="w-full h-48 object-cover"/>
-                    <div className="p-6">
-                        <h3 className="text-xl font-semibold mb-2">Weather Dashboard</h3>
-                        <p className="text-gray-600 dark:text-gray-400 mb-4">Beautiful weather app with location-based forecasts</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span className="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-1 rounded-full text-sm">API</span>
-                            <span className="bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 px-3 py-1 rounded-full text-sm">CSS3</span>
-                        </div>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
-                                <i data-lucide="external-link" className="w-4 h-4 mr-1"></i>
-                                Live Demo
-                            </a>
-                            <a href="#" className="text-gray-600 dark:text-gray-400 hover:underline flex items-center">
-                                <i data-lucide="github" className="w-4 h-4 mr-1"></i>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Featured Projects
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            Recent projects that reflect our passion and expertise
+          </p>
         </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+
+                {/* Description with toggle */}
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  {expanded === index
+                    ? project.description
+                    : project.description.length > 80
+                    ? project.description.slice(0, 80) + "..."
+                    : project.description}
+                </p>
+                <button
+                  onClick={() => toggleExpand(index)}
+                  className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline mb-4"
+                >
+                  {expanded === index ? "Read Less" : "Read More"}
+                </button>
+
+                {/* Tech badges */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
-    );
-}
+  );
+};
+
 export default Project;

@@ -1,59 +1,113 @@
-const Skills = ()=> {
-    return(
+import ImageSlider from "./Slider";
+
+const Skills = () => {
+  return (
     // <!-- Skills Section -->
     <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Technologies</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400">
-                    Technologies I work with to bring ideas to life
-                </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                    <i data-lucide="code" className="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
-                    <h3 className="font-semibold mb-2">JavaScript</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">ES6+, TypeScript</p>
-                </div>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                    <i data-lucide="smartphone" className="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
-                    <h3 className="font-semibold mb-2">React</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Hooks, Redux, Next.js</p>
-                </div>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                    <i data-lucide="server" className="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
-                    <h3 className="font-semibold mb-2">Node.js</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Express, MongoDB</p>
-                </div>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                    <i data-lucide="palette" className="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
-                    <h3 className="font-semibold mb-2">Design</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Figma, Adobe XD</p>
-                </div>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                    <i data-lucide="database" className="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
-                    <h3 className="font-semibold mb-2">Database</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">PostgreSQL, MongoDB</p>
-                </div>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                    <i data-lucide="cloud" className="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
-                    <h3 className="font-semibold mb-2">Cloud</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">AWS, Vercel, Docker</p>
-                </div>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                    <i data-lucide="git-branch" className="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
-                    <h3 className="font-semibold mb-2">Version Control</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Git, GitHub</p>
-                </div>
-                <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                    <i data-lucide="layout" className="w-12 h-12 text-blue-600 mx-auto mb-3"></i>
-                    <h3 className="font-semibold mb-2">CSS</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Tailwind, Sass</p>
-                </div>
-            </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Technologies</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            Technologies we work with to bring ideas to life
+          </p>
         </div>
-    </section>
-    )
-}
+        <ImageSlider/>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {/* JavaScript */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
+             <svg xmlns className="w-12 h-12 text-yellow-500 mx-auto mb-3" viewBox="0 0 34 34" fill="currentColor">
+              <rect x="2" y="2" width="28" height="28" fill="#FFCA28"/>
+              <path d="M19 25.2879L21.0615 23.9237C21.2231 24.4313 22.2462 25.6368 23.5385 25.6368C24.8308 25.6368 25.4308 24.931 25.4308 24.463C25.4308 23.1878 24.1112 22.7382 23.4774 22.5223C23.374 22.4871 23.289 22.4581 23.2308 22.4328C23.2009 22.4198 23.1558 22.4025 23.0979 22.3804C22.393 22.1111 19.7923 21.1175 19.7923 18.2373C19.7923 15.065 22.8538 14.7002 23.5462 14.7002C23.9991 14.7002 26.1769 14.7557 27.2615 16.7939L25.2615 18.1898C24.8231 17.3015 24.0946 17.0081 23.6462 17.0081C22.5385 17.0081 22.3077 17.8201 22.3077 18.1898C22.3077 19.227 23.5112 19.6919 24.5273 20.0844C24.7932 20.1871 25.0462 20.2848 25.2615 20.3866C26.3692 20.91 28 21.7666 28 24.463C28 25.8136 26.8672 28.0002 24.0154 28.0002C20.1846 28.0002 19.1692 25.7003 19 25.2879Z" fill="#3E3E3E"/>
+              <path d="M9 25.5587L11.1487 24.1953C11.317 24.7026 11.9713 25.638 12.9205 25.638C13.8698 25.638 14.3557 24.663 14.3557 24.1953V15.0002H16.9982V24.1953C17.041 25.4636 16.3376 28.0002 13.2332 28.0002C10.379 28.0002 9.19242 26.3039 9 25.5587Z" fill="#3E3E3E"/>
+              </svg>
+            <h3 className="font-semibold mb-2">JavaScript</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">ES6+, TypeScript</p>
+          </div>
+
+          {/* React */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
+             <svg className="w-12 h-12 text-cyan-500 mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" height="16" width={"16"} viewBox="0 0 32 32" fill="currentColor">
+                <path d="M18.6789 15.9759C18.6789 14.5415 17.4796 13.3785 16 13.3785C14.5206 13.3785 13.3211 14.5415 13.3211 15.9759C13.3211 17.4105 14.5206 18.5734 16 18.5734C17.4796 18.5734 18.6789 17.4105 18.6789 15.9759Z" fill="#53C1DE"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.7004 11.1537C25.2661 8.92478 25.9772 4.79148 23.4704 3.39016C20.9753 1.99495 17.7284 4.66843 16.0139 6.27318C14.3044 4.68442 10.9663 2.02237 8.46163 3.42814C5.96751 4.82803 6.73664 8.8928 7.3149 11.1357C4.98831 11.7764 1 13.1564 1 15.9759C1 18.7874 4.98416 20.2888 7.29698 20.9289C6.71658 23.1842 5.98596 27.1909 8.48327 28.5877C10.9973 29.9932 14.325 27.3945 16.0554 25.7722C17.7809 27.3864 20.9966 30.0021 23.4922 28.6014C25.9956 27.1963 25.3436 23.1184 24.7653 20.8625C27.0073 20.221 31 18.7523 31 15.9759C31 13.1835 26.9903 11.7923 24.7004 11.1537ZM24.4162 19.667C24.0365 18.5016 23.524 17.2623 22.8971 15.9821C23.4955 14.7321 23.9881 13.5088 24.3572 12.3509C26.0359 12.8228 29.7185 13.9013 29.7185 15.9759C29.7185 18.07 26.1846 19.1587 24.4162 19.667ZM22.85 27.526C20.988 28.571 18.2221 26.0696 16.9478 24.8809C17.7932 23.9844 18.638 22.9422 19.4625 21.7849C20.9129 21.6602 22.283 21.4562 23.5256 21.1777C23.9326 22.7734 24.7202 26.4763 22.85 27.526ZM9.12362 27.5111C7.26143 26.47 8.11258 22.8946 8.53957 21.2333C9.76834 21.4969 11.1286 21.6865 12.5824 21.8008C13.4123 22.9332 14.2816 23.9741 15.1576 24.8857C14.0753 25.9008 10.9945 28.557 9.12362 27.5111ZM2.28149 15.9759C2.28149 13.874 5.94207 12.8033 7.65904 12.3326C8.03451 13.5165 8.52695 14.7544 9.12123 16.0062C8.51925 17.2766 8.01977 18.5341 7.64085 19.732C6.00369 19.2776 2.28149 18.0791 2.28149 15.9759ZM9.1037 4.50354C10.9735 3.45416 13.8747 6.00983 15.1159 7.16013C14.2444 8.06754 13.3831 9.1006 12.5603 10.2265C11.1494 10.3533 9.79875 10.5569 8.55709 10.8297C8.09125 9.02071 7.23592 5.55179 9.1037 4.50354ZM20.3793 11.5771C21.3365 11.6942 22.2536 11.85 23.1147 12.0406C22.8562 12.844 22.534 13.6841 22.1545 14.5453C21.6044 13.5333 21.0139 12.5416 20.3793 11.5771ZM16.0143 8.0481C16.6054 8.66897 17.1974 9.3623 17.7798 10.1145C16.5985 10.0603 15.4153 10.0601 14.234 10.1137C14.8169 9.36848 15.414 8.67618 16.0143 8.0481ZM9.8565 14.5444C9.48329 13.6862 9.16398 12.8424 8.90322 12.0275C9.75918 11.8418 10.672 11.69 11.623 11.5748C10.9866 12.5372 10.3971 13.5285 9.8565 14.5444ZM11.6503 20.4657C10.6679 20.3594 9.74126 20.2153 8.88556 20.0347C9.15044 19.2055 9.47678 18.3435 9.85796 17.4668C10.406 18.4933 11.0045 19.4942 11.6503 20.4657ZM16.0498 23.9915C15.4424 23.356 14.8365 22.6531 14.2448 21.8971C15.4328 21.9423 16.6231 21.9424 17.811 21.891C17.2268 22.6608 16.6369 23.3647 16.0498 23.9915ZM22.1667 17.4222C22.5677 18.3084 22.9057 19.1657 23.1742 19.9809C22.3043 20.1734 21.3652 20.3284 20.3757 20.4435C21.015 19.4607 21.6149 18.4536 22.1667 17.4222ZM18.7473 20.5941C16.9301 20.72 15.1016 20.7186 13.2838 20.6044C12.2509 19.1415 11.3314 17.603 10.5377 16.0058C11.3276 14.4119 12.2404 12.8764 13.2684 11.4158C15.0875 11.2825 16.9178 11.2821 18.7369 11.4166C19.7561 12.8771 20.6675 14.4086 21.4757 15.9881C20.6771 17.5812 19.7595 19.1198 18.7473 20.5941ZM22.8303 4.4666C24.7006 5.51254 23.8681 9.22726 23.4595 10.8426C22.2149 10.5641 20.8633 10.3569 19.4483 10.2281C18.6239 9.09004 17.7698 8.05518 16.9124 7.15949C18.1695 5.98441 20.9781 3.43089 22.8303 4.4666Z" fill="#53C1DE"/>
+            </svg>
+            <h3 className="font-semibold mb-2">React</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Hooks, Redux, Next.js</p>
+          </div>
+
+          {/* Node.js */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
+            <svg className="w-12 h-12 text-green-600 mx-auto mb-3" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M17.1725 2.29872C16.4627 1.89953 15.5373 1.90132 14.8269 2.29872C11.2689 4.26227 7.71082 6.22641 4.15216 8.18906C3.45969 8.55335 2.99264 9.29698 3.00009 10.0688V21.9328C2.99509 22.7197 3.48622 23.4705 4.19655 23.8298C5.21871 24.3736 6.2118 24.9726 7.25244 25.4802C8.45451 26.0709 9.95843 26.2015 11.1752 25.5855C12.1629 25.075 12.6016 23.9395 12.6003 22.896C12.6083 18.9806 12.6016 15.0651 12.6034 11.1496C12.6269 10.9756 12.4962 10.7896 12.3064 10.7938C11.8517 10.7866 11.3964 10.7896 10.9417 10.7926C10.7699 10.7764 10.6022 10.9191 10.6152 11.0918C10.6091 14.982 10.6164 18.8734 10.6115 22.7642C10.6214 23.3024 10.2578 23.8196 9.73913 24.0014C8.5412 24.4213 5.12198 22.2012 5.12198 22.2012C4.9965 22.1431 4.91682 22.007 4.92912 21.8718C4.92912 17.9576 4.92973 14.0433 4.92912 10.1297C4.91187 9.97191 5.00912 9.8298 5.15402 9.76538C8.70033 7.8134 12.2448 5.85654 15.7911 3.90336C15.9143 3.82115 16.086 3.8214 16.2089 3.90396C19.7552 5.85654 23.3003 7.81161 26.8472 9.76368C26.9926 9.828 27.0857 9.9725 27.0709 10.1297C27.0703 14.0433 27.0721 17.9576 27.0697 21.8713C27.0802 22.0098 27.0086 22.144 26.8793 22.2048C23.3661 24.1462 19.8129 26.025 16.3315 28.0228C16.1796 28.1099 16.0075 28.2086 15.8373 28.1126C14.9218 27.6062 14.0174 27.0801 13.1049 26.5688C13.0057 26.5069 12.8794 26.4803 12.7759 26.5496C12.3668 26.7652 11.982 26.9398 11.5122 27.1258C10.8524 27.387 10.9578 27.4938 11.5529 27.8405C12.62 28.4444 13.6889 29.0459 14.756 29.6504C15.4585 30.0888 16.4024 30.12 17.1275 29.7149C20.6861 27.7538 24.2436 25.7904 27.8029 23.8293C28.5113 23.468 29.0049 22.7202 28.9999 21.9327V10.0688C29.0068 9.31264 28.5576 8.58227 27.886 8.21259C24.3156 6.23947 20.7435 4.27064 17.1725 2.29872Z" fill="#8CC84B"/>
+                <path d="M22.5419 11.2062C21.1452 10.459 19.4836 10.4192 17.9315 10.5169C16.8102 10.6277 15.6309 10.9371 14.814 11.7409C13.9761 12.5489 13.7937 13.8537 14.1917 14.9085C14.4769 15.6539 15.1948 16.1386 15.9372 16.395C16.8935 16.7326 17.8979 16.837 18.9026 16.9414C19.819 17.0366 20.7357 17.1319 21.6165 17.4042C21.9763 17.5234 22.3953 17.7058 22.5055 18.0973C22.6073 18.5609 22.4957 19.0998 22.1193 19.4219C20.9237 20.3682 17.5979 20.2232 16.4166 19.4784C15.939 19.1611 15.7332 18.5994 15.6495 18.0641C15.6402 17.8973 15.5059 17.7443 15.3248 17.757C14.8713 17.7516 14.4178 17.7528 13.9643 17.7564C13.8061 17.7431 13.6416 17.8557 13.6329 18.0172C13.5397 20.4689 15.7914 21.5377 17.9039 21.773C19.1108 21.888 20.3442 21.8814 21.5327 21.6224C22.4261 21.419 23.3219 21.0444 23.9369 20.3563C24.6953 19.52 24.8444 18.2749 24.5043 17.2332C24.2443 16.4559 23.5012 15.9573 22.7416 15.7008C21.7086 15.3466 20.4844 15.1562 19.5488 15.0671C18.1889 14.9376 16.5729 14.9905 16.188 14.0969C16.0345 13.629 16.1651 13.048 16.5951 12.7602C17.7328 11.9885 20.0483 12.091 21.2265 12.6675C21.7675 12.9384 22.081 13.4948 22.2104 14.0565C22.2344 14.2215 22.3454 14.3937 22.5364 14.3865C22.9868 14.3955 23.4372 14.3889 23.8875 14.3895C24.0422 14.4003 24.2116 14.313 24.2418 14.1546C24.2227 12.9806 23.6232 11.7788 22.5419 11.2062Z" fill="#8CC84B"/>
+            </svg>
+            <h3 className="font-semibold mb-2">Node.js</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Express, MongoDB</p>
+          </div>
+
+          {/* Design (Figma) */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
+              <svg className="w-20 h-20 text-purple-500 mx-auto" viewBox="0 0 24 24" fill="currentColor"><path fill="#1ABCFE" d="M8.55 8c0-1.289 1.019-2.333 2.275-2.333C12.082 5.667 13.1 6.71 13.1 8c0 1.289-1.018 2.333-2.275 2.333C9.57 10.333 8.55 9.29 8.55 8z"/><path fill="#0ACF83" d="M4 12.667c0-1.289 1.019-2.334 2.275-2.334H8.55v2.334C8.55 13.955 7.531 15 6.275 15S4 13.955 4 12.667z"/><path fill="#FF7262" d="M8.55 1v4.667h2.275c1.257 0 2.275-1.045 2.275-2.334C13.1 2.045 12.082 1 10.825 1H8.55z"/><path fill="#F24E1E" d="M4 3.333c0 1.289 1.019 2.334 2.275 2.334H8.55V1H6.275C5.019 1 4 2.045 4 3.333z"/><path fill="#A259FF" d="M4 8c0 1.289 1.019 2.333 2.275 2.333H8.55V5.667H6.275C5.019 5.667 4 6.71 4 8z"/></svg>
+            <h3 className="font-semibold mb-2">Design</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Figma, Adobe XD</p>
+          </div>
+
+          {/* Database (PostgreSQL) */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
+              <svg className="w-12 h-12 text-blue-600 mx-auto mb-3" viewBox="0 0" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
+              <path d="M44.0001 11C44.0001 11 44 36.0623 44 38C44 41.3137 35.0457 44 24 44C12.9543 44 4.00003 41.3137 4.00003 38C4.00003 36.1423 4 11 4 11" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M44 29C44 32.3137 35.0457 35 24 35C12.9543 35 4 32.3137 4 29" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M44 20C44 23.3137 35.0457 26 24 26C12.9543 26 4 23.3137 4 20" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <ellipse cx="24" cy="10" rx="20" ry="6" fill="#2F88FF" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            <h3 className="font-semibold mb-2">Database</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">PostgreSQL, MongoDB</p>
+          </div>
+
+          {/* Cloud (AWS) */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
+            <svg className="w-12 h-12 text-orange-500 mx-auto mb-3" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <h3 className="font-semibold mb-2">Cloud</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">AWS, Vercel, Docker</p>
+          </div>
+
+          {/* Git */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
+              <svg className="w-12 h-12 text-red-500 mx-auto mb-3" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M2.58536 17.4132C1.80488 16.6327 1.80488 15.3673 2.58536 14.5868L14.5868 2.58536C15.3673 1.80488 16.6327 1.80488 17.4132 2.58536L29.4146 14.5868C30.1951 15.3673 30.1951 16.6327 29.4146 17.4132L17.4132 29.4146C16.6327 30.1951 15.3673 30.1951 14.5868 29.4146L2.58536 17.4132Z" fill="#EE513B"/>
+                <path d="M12.1489 5.06152L10.9336 6.27686L14.0725 9.41577C13.9455 9.68819 13.8746 9.99201 13.8746 10.3124C13.8746 11.222 14.4461 11.9981 15.2496 12.3012V19.9798C14.4461 20.2829 13.8746 21.059 13.8746 21.9686C13.8746 23.1422 14.826 24.0936 15.9996 24.0936C17.1732 24.0936 18.1246 23.1422 18.1246 21.9686C18.1246 21.144 17.6549 20.429 16.9684 20.0768V12.3117L19.9689 15.3122C19.8481 15.5791 19.7809 15.8754 19.7809 16.1874C19.7809 17.361 20.7323 18.3124 21.9059 18.3124C23.0795 18.3124 24.0309 17.361 24.0309 16.1874C24.0309 15.0138 23.0795 14.0624 21.9059 14.0624C21.6778 14.0624 21.4582 14.0983 21.2522 14.1648L18.0297 10.9423C18.0914 10.7433 18.1246 10.5317 18.1246 10.3124C18.1246 9.13878 17.1732 8.18738 15.9996 8.18738C15.7803 8.18738 15.5688 8.22061 15.3697 8.2823L12.1489 5.06152Z" fill="white"/>
+              </svg>
+            <h3 className="font-semibold mb-2">Version Control</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Git, GitHub</p>
+          </div>
+
+          {/* AI (Python) */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
+            {/* <svg className="w-12 h-12 text-yellow-600 mx-auto mb-3" viewBox="0 0 24 24" fill="currentColor"> */}
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-yellow-600 mx-auto mb-3" viewBox="0 0 24 24" fill="currentColor">
+                <g data-name="Product Icons">
+                <polygon class="cls-1" points="20.69 12.43 12 16.78 12 22 20.69 17.65 20.69 12.43"/>
+                <path class="cls-2" d="M6.78,4.61,3.31,6.35Z"/>
+                <polygon class="cls-1" points="17.22 8.09 17.22 8.09 17.22 12.43 20.69 10.7 20.69 6.35 17.22 8.09"/>
+                <polygon class="cls-1" points="12 15.04 15.48 13.31 15.48 8.96 15.48 8.96 12 10.7 12 15.04"/>
+                <polygon class="cls-3" points="6.78 4.61 3.31 6.35 6.78 8.09 10.26 6.35 6.78 4.61"/>
+                <polygon class="cls-4" points="12 2 8.52 3.74 12 5.48 17.22 8.09 20.69 6.35 12 2"/>
+                <polygon class="cls-3" points="12 7.22 8.52 8.96 12 10.7 15.48 8.96 12 7.22"/>
+                <path class="cls-5" d="M8.52,15v5.22L12,22V16.78Zm2.61,5.22-1.74-.87V16.78l1.74.87Z"/>
+                <path class="cls-5" d="M3.31,6.35v11.3l3.47,1.74V8.09Zm2.61,11.3-1.75-.87v-10l1.75.87Z"/>
+                <path class="cls-5" d="M8.52,9,12,10.7V15L8.52,13.31Zm2.61,4.35v-3L9.39,9.45v3Z"/>
+                </g>
+
+              </svg>
+            <h3 className="font-semibold mb-2">AI</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Python, Data Mining</p>
+          </div>
+        </div>
+      </div>
+    </section>  
+  );
+};
+
 export default Skills;
