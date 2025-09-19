@@ -76,6 +76,14 @@ const projects = [
     tech: ["Jquery", "HTML", "CSS"],
     demo: "#",
     code: "#",
+  },
+  {
+    title: "Kragnetic",
+    description:"A next-generation AI-Powered Telephony Agent Platform on Elixir/Phoenix, designed to deliver real-time, intelligent voice interactions with advanced AI orchestration and telephony integration. The platform combines structured/graph data systems, LLM-based multi-agent frameworks, and low-latency speech pipelines to create a truly seamless conversational AI for enterprise-scale use cases (customer support, scheduling, reminders, and real-time voice assistance).",
+    image: "/Images/kra.png",
+    tech: ["NextJs", "Tailwind", "Python", "AI", "LiveKit", "KuzuDB", "PostGres", "DSPY" ],
+    demo: "#",
+    code: "#",
   }
 
 ];
