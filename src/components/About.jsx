@@ -72,15 +72,15 @@ const About = () => {
           </div>
 
           {/* Right Column */}
-          <div className="relative">
+          <div className="relative top-8">
             <img
-              src="/Images/story.png"
+              src="/Images/story1.png"
               alt="Coding"
               className="rounded-lg shadow-lg"
             />
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">15+</span>
-            </div>
+            {/* <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-600 rounded-lg flex items-center justify-center"> */}
+              {/* <span className="text-white font-bold text-2xl">15+</span> */}
+            {/* </div> */}
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ export default defineConfig({
     port: 5173, // Keep the port configuration
     host: '0.0.0.0', // Set the host address to listen on all interfaces
      allowedHosts: [
-      '36ee5cc22b71.ngrok-free.app'
+      "e349da6ae001.ngrok-free.app"
     ]
   },
 

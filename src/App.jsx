@@ -6,12 +6,16 @@ import Skills from './components/Skills'
 import Project from './components/project'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import {ScrollLinked} from './components/Motion'
+import { useScroll } from 'motion/react'
 
 function App() {
-  const [count, setCount] = useState(0)
+      const { scrollYProgress } = useScroll()
+
 
   return (
    <>
+  <ScrollLinked/>
   <Navigation />
   <div className="pt-16">   {/* pushes content down */}
     <Intro />

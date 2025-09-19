@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react"; // ✅ import menu & close icons
 import ThemeToggle from "../hooks/ThemeToggle";
-import { Link } from "react-router-dom";
+import { motion } from "motion/react"
+
 
 
 const Navigation = () => {

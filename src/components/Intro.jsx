@@ -1,21 +1,73 @@
+import { motion } from "framer-motion";
+
 const Intro = () => {
+
+    const text1 = "WE PROVIDE";
+    const text2 =
+    "Delivering strategic, structured, and scalable solutions that drive lasting success.";
+
+    const container = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+        opacity: 1,
+        transition: { staggerChildren: 0.05, delayChildren: 0.01 * i },
+    }),
+    };
+
+    const child = {
+    hidden: {
+        opacity: 0,
+        y: 20,
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 200,
+        },
+    },
+    };
+
     return (
     // <!-- Hero Section -->
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="max-w-3xl mx-auto">
                 {/* <img src={"/Images/spineor-logo.jpg"}/> */}
                 {/* <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Profile" className="w-32 h-32 mx-auto mb-8 border-4 border-white shadow-lg"/> */}
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                    <span className="font-extrabold bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent">Spineor Web Services</span>
-                </h1>
+                <motion.h1
+                    className="text-4xl md:text-6xl font-bold mb-4"
+                    initial={{ scale: 3, opacity: 0 }}   // 👈 start very big + invisible
+                    animate={{ scale: 1, opacity: 1 }}   // 👈 end at normal size
+                    transition={{ duration: 0.6, ease: "easeOut" }} // 👈 smooth timing
+                >
+                    <span className="font-extrabold bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent">
+                        Spineor Web Services
+                    </span>
+                </motion.h1>
                 <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 font-poppins font-semibold tracking-wide">
                 WE PROVIDE
                 </p>
 
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto font-merriweather italic leading-relaxed">
+                 <motion.p
+                    className="text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto font-merriweather italic leading-relaxed"
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                    >
+                    {text2.split("").map((char, index) => (
+                        <motion.span key={index} variants={child}>
+                            {char}
+                        </motion.span>
+                    ))}
+                </motion.p>
+
+                {/* <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto font-merriweather italic leading-relaxed">
                     Delivering strategic, structured, and scalable solutions that drive lasting success.
-                </p>
+                </p> */}
+
                 <div className="space-x-4">
                 {/* Primary Button */}
                     <button
