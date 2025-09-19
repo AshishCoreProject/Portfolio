@@ -4,9 +4,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const images = [
     "/Images/frondend.jpg",
     "/Images/backend.jpg",
-    "/Images/MobileApp.png",
-    "/Images/WebApp.png",
-    "Images/fullStack.png"
+    "/Images/MobileApp.jpg",
+    "/Images/Webapp.jpg",
+    "/Images/fullStack.jpg"
 ];
 
 const ImageSlider = () => {
@@ -40,15 +40,20 @@ const ImageSlider = () => {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-2 rounded shadow-md"
-      >
+        className="absolute top-1/2 left-4 -translate-y-1/2 
+             bg-white/70 text-gray-800 hover:bg-white 
+             dark:bg-gray-800/70 dark:text-white dark:hover:bg-gray-700 
+             p-2 rounded shadow-md transition">
         <ChevronLeft size={24} />
       </button>
 
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-2 rounded shadow-md"
+        className="absolute top-1/2 right-4 -translate-y-1/2 
+             bg-white/70 text-gray-800 hover:bg-white 
+             dark:bg-gray-800/70 dark:text-white dark:hover:bg-gray-700 
+             p-2 rounded shadow-md transition"
       >
         <ChevronRight size={24} />
       </button>

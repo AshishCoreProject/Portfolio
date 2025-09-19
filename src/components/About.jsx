@@ -10,7 +10,7 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             About Us
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-800 dark:text-gray-400 max-w-3xl mx-auto">
             Empowering businesses with strategic and systematic solutions that endure.
           </p>
         </div>
@@ -24,24 +24,24 @@ const About = () => {
               Our Story
             </h3>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-              Our Team has over 16 years of experience creating secure, scalable, and high-performing web applications for startups, enterprises, and government projects. 
+            <p className="text-gray-800 dark:text-gray-400 leading-relaxed mb-4">
+              Our Team has over 12 years of experience creating secure, scalable, and high-performing web applications for startups, enterprises, and government projects. 
               We specialize in frontend (React.js, Next.js, Tailwind CSS, Material UI, Bootstrap) and backend (Node.js, Express, NestJS, MongoDB, PostgreSQL), 
               with a strong focus on delivering user-friendly, modern digital experiences.
             </p>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-800 dark:text-gray-400 leading-relaxed mb-6">
               At Spineor Webservices, we are passionate about building innovative digital solutions that empower businesses to grow, scale, and thrive in the modern world. 
               Since our inception, we've partnered with startups, SMEs, and enterprises across the globe to deliver tailored software development, web and mobile applications, 
               cloud solutions, and DevOps services.
             </p>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-800 dark:text-gray-400 leading-relaxed mb-6">
               What sets us apart is our commitment to quality, transparency, and long-term partnerships. 
               We believe in collaborating closely with our clients, understanding their vision, and transforming it into impactful digital products.
             </p>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-800 dark:text-gray-400 leading-relaxed mb-6">
               At Spineor Webservices, technology is not just about code—it’s about crafting experiences, driving innovation, and helping businesses achieve their goals faster and smarter.
             </p>
 
@@ -60,12 +60,12 @@ const About = () => {
                   <span className="w-6 h-6 flex items-center justify-center rounded-full text-blue-600 mr-3">
                     <Circle size={14} />
                   </span>
-                  <span className="text-gray-600 dark:text-gray-400 leading-relaxed">{value}</span>
+                  <span className="text-gray-800 dark:text-gray-400 leading-relaxed">{value}</span>
                 </li>
               ))}
             </ul>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="text-gray-800 dark:text-gray-400 leading-relaxed">
               Whether you’re looking to launch a new product, optimize your operations, 
               or scale your digital presence, Spineor Webservices is your trusted technology partner.
             </p>

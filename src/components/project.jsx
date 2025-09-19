@@ -53,6 +53,30 @@ const projects = [
     demo: "#",
     code: "#",
   },
+  {
+    title: "Order & Track from Restaurants Near You",
+    description:"Meals on Wheels 4 U is a convenient multi-platform service dedicated to delivering nutritious meals to those in need. Available on Android, iOS, and web, the app simplifies the ordering process, allowing users to choose from a variety of meal options tailored to their dietary preferences.",
+    image: "/Images/meal4U.png",
+    tech: ["PHP", "HTML", "Bootstrap"],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Mid Land Fundraiseing",
+    description:"Midland Fundraising offers a variety of fundraising ideas that are sure to bring high profits to your organization. We have a fundraiser for all seasons, from spring to winter and everything in between. Our fundraising programs feature many seasonal fundraising products, including flower bulbs, wrapping paper, delicious gourmet foods, sweet candy treats, home decor, personal items, and a variety of cookbooks.",
+    image: "/Images/Midland.png",
+    tech: ["Figma, Adobe"],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Thar Process | Advanced Supercritical CO₂",
+    description:"Thar Process engineers and manufactures cutting-edge supercritical CO₂ extraction and purification equipment. With over 30 years of experience serving global markets, we offer sustainable, certified solutions from lab to industrial scale.",
+    image: "/Images/TharProcess.png",
+    tech: ["Jquery, HTML, CSS"],
+    demo: "#",
+    code: "#",
+  }
 
 ];
 

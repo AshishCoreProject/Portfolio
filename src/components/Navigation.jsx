@@ -1,10 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react"; // ✅ import menu & close icons
 import ThemeToggle from "../hooks/ThemeToggle";
+import { Link } from "react-router-dom";
+
 
 const Navigation = () => {
+  
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
+
+
+  // Keep darkMode in sync with localStorage
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setDarkMode(document.documentElement.classList.contains("dark"));
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <nav className="fixed top-0 w-full bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
@@ -12,9 +29,17 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo / Name */}
           <div className="flex-shrink-0">
-            <h1 className="!text-2xl md:!text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-yellow-500 to-blue-500 bg-clip-text text-transparent">
+            {/* <h1 className="!text-2xl md:!text-3xl font-extrabold bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent">
               Spineor Web Services
-            </h1>
+            </h1> */}
+          <a href="#">
+           <img 
+              src={darkMode ? "/Images/spineorLogo2.png" : "/Images/spineorLogo.png"}
+              height="20px"
+              width="150px"
+              alt="Spineor Logo"
+            />
+          </a>
           </div>
 
           {/* Desktop Menu */}
@@ -53,7 +78,7 @@ const Navigation = () => {
             <a onClick={handleClick} href="#about" className="block hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-base font-medium">About</a>
             <a onClick={handleClick} href="#skills" className="block hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-base font-medium">Skills</a>
             <a onClick={handleClick} href="#projects" className="block hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-base font-medium">Projects</a>
-            <a onClick={handleClick} href="#contact" className="block hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-base font-medium">Contact</a>
+            {/* <a onClick={handleClick} href="#contact" className="block hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-base font-medium">Contact</a> */}
           </div>
         </div>
       )}
